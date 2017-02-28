@@ -9,7 +9,7 @@ global.ROOT_PATH = __dirname;
 global.Promise = require('bluebird');
 global.config  = require('config');
 
-// global.logger = require('./logger').getLogger('main');
+global.logger = require('./logger').getLogger('main');
 
 // 对Date的扩展，将 Date 转化为指定格式的String
 // 月(M)、日(d)、小时(h)、分(m)、秒(s)、季度(q) 可以用 1-2 个占位符，
