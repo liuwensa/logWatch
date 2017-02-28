@@ -7,7 +7,6 @@
 const path = require('path');
 const fs   = require('fs-extra');
 
-console.log(config)
 // eslint-disable-next-line
 fs.mkdirpSync(path.join(config.log.logFileDir, 'main'));
 
