@@ -1,0 +1,25 @@
+#!/usr/bin/env node
+
+'use strict';
+
+require('../global-variable.js');
+
+const http = require('http');
+
+const app    = require('../app');
+const socket = require('../lib/socket');
+
+app.set('port', 3000);
+
+const server = http.createServer(app);
+
+// 启动HTTP 服务时，注入Socket.io
+socket.io(server);
+
+server.listen(app.get('port'), '127.0.0.1', function (err) {
+  if (err) {
+    throw err;
+  } else {
+    logger.info(`server start on ${app.get('port')}`);
+  }
+});
