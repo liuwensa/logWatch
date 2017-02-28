@@ -1,0 +1,19 @@
+{
+  "apps": [
+    {
+      "name": "logWatch",
+      "script": "./running/bin/www",
+      // "merge_logs": true,
+      // "instances": 4,
+      // "exec_mode": "cluster",
+      // "autorestart": true,
+      // "exec_interpreter": "node",
+      "env": {
+        "NODE_CONFIG_STRICT_MODE": true,
+        "NODE_APP_INSTANCE": "",
+        "NODE_ENV": "production",
+        "NODE_CONFIG_DIR": "./running/config"
+      }
+    }
+  ]
+}
